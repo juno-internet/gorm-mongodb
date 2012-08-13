@@ -83,6 +83,11 @@ class MongoPluginSupport {
     }
 
     static void ensureIndices(application, domainClass, ctx) {
+        Map flatConfig = application.getConfig().flatten()
+        if (flatConfig.containsKey("mongodb.createIndexes") && !flatConfig.get("mongodb.createIndexes")) {
+            return
+        }
+
         def domain = domainClass.clazz
         final Datastore datastore = getMongoBean(application).datastore
 
