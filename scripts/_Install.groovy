@@ -23,10 +23,10 @@ ant.mkdir(dir:"${basedir}/grails-app/mongo")
 /**
  * build ast jar
  */
-def pluginDir = mongodbMorphiaPluginDir
+def pluginDir = kaufdaMongodbMorphiaPluginDir
 if (pluginDir) {
 
-    def mongoAstSrcDir = new File("${mongodbMorphiaPluginDir}/src/groovy/grails/plugins/mongodb/ast")
+    def mongoAstSrcDir = new File("${kaufdaMongodbMorphiaPluginDir}/src/groovy/grails/plugins/mongodb/ast")
     def mongoAstBuildDir = new File(((String)grailsSettings.grailsVersion).startsWith("1")?grailsSettings.pluginClassesDir:grailsSettings.pluginBuildClassesDir, "ast")
     def mongoAstDestDir = new File(pluginDir, "lib")
 
