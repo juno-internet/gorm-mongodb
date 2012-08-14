@@ -10,7 +10,7 @@ import com.google.code.morphia.Morphia
 import com.google.code.morphia.Datastore
 import com.google.code.morphia.mapping.MappedClass
 
-class MongodbMorphiaGrailsPlugin {
+class KaufdaMongodbMorphiaGrailsPlugin {
 
     def license = "APACHE"
     def developers = [
